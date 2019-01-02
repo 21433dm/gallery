@@ -43,19 +43,29 @@ $_SESSION['userid'] = "Admin";
             }
         }
         ?>
-    </div>
-
+        </div>
     <div>
     <?php
     if (isset($_SESSION['userid'])) { 
-    echo '</div>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <input type="text" name="filename" placeholder="File name...">
-        <input type="text" name="filetitle" placeholder="Image title...">
-        <input type="text" name="filedesc" placeholder="Image description...">
-        <input type="file" name="file">
-        <button type="submit" name="submit">UPLOAD</button>
-    </form>
+    echo '<div class="container">
+            <div class="row justify-content-center">
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <div class="form-group row">
+                        <input type="text" name="filename" placeholder="File name...">
+                    </div>
+                    <div class="form-group row">
+                        <input type="text" name="filetitle" placeholder="Image title...">
+                    </div>
+                    <div class="form-group row">
+                        <input type="text" name="filedesc" placeholder="Image description...">
+                    </div>
+                    <div class="form-group row">
+                        <input type="file" name="file">
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-success">UPLOAD</button>
+                </form>
+            </div> 
+        </div>
     </div>';
     }
     ?>
